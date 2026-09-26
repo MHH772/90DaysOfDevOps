@@ -25,3 +25,12 @@
 * **`git branch`**: Lists all local branches and highlights the one you are currently working on.
 * **`git checkout -b <new-branch-name>`**: Creates a new branch and immediately switches your working directory to it.
 * **`git merge <branch-name>`**: Merges the specified branch into your current active branch. *(Example: If you are on `main` and run `git merge feature-a`, the changes from `feature-a` are brought into `main`.)*
+
+## Advanced Branching & Manipulation
+* **`git merge <branch>`**: Combines the specified branch into your current active branch.
+* **`git merge --squash <branch>`**: Takes all commits from the target branch, condenses them into a single uncommitted change, and places them in your staging area.
+* **`git rebase <branch>`**: Rewrites your current branch's history by moving its base to the tip of the target branch, creating a clean, linear, straight-line history. (Never use on public/shared branches).
+* **`git cherry-pick <commit-id>`**: Duplicates a specific, single commit from anywhere in the repository and applies it to your current branch.
+* **`git stash`**: Temporarily saves uncommitted changes and reverts your working directory to a clean state.
+* **`git stash pop`**: Applies the most recently stashed changes and deletes that save state from the stash queue.
+* **`git stash apply`**: Applies the stashed changes but keeps the save state in the queue for future use.
