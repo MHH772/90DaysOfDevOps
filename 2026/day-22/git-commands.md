@@ -34,3 +34,10 @@
 * **`git stash`**: Temporarily saves uncommitted changes and reverts your working directory to a clean state.
 * **`git stash pop`**: Applies the most recently stashed changes and deletes that save state from the stash queue.
 * **`git stash apply`**: Applies the stashed changes but keeps the save state in the queue for future use.
+
+## Reversing & Undoing
+* **`git reset --soft HEAD~1`**: Undoes the last commit but keeps all the changed files safely in your staging area.
+* **`git reset --mixed HEAD~1`**: Undoes the last commit and un-stages the files, returning them to your working directory.
+* **`git reset --hard HEAD~1`**: DANGER. Completely wipes the last commit and permanently deletes those changes from your disk.
+* **`git revert <commit-id>`**: Safely undoes a specific commit by creating a brand new commit with the opposite changes. Leaves history intact.
+* **`git reflog`**: The ultimate safety net. Shows a log of every single action you've taken in Git (including resets), allowing you to recover "lost" commits.
